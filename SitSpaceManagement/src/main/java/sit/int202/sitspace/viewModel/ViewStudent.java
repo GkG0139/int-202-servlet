@@ -1,9 +1,10 @@
-package sit.int202.sitspace.models;
+package sit.int202.sitspace.viewModel;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import sit.int202.sitspace.models.Student;
 
 @Getter
 @Setter

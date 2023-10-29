@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-import sit.int202.sitspace.models.ViewStudent;
+import sit.int202.sitspace.viewModel.ViewStudent;
 import sit.int202.sitspace.repositories.StudentRepository;
 
 @WebServlet(name = "AllStudentDataServlet", value = "/all-student-data")
