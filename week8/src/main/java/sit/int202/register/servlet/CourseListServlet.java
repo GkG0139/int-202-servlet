@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.util.Map;
 import sit.int202.register.models.CourseRepository;
 import sit.int202.register.models.Semester;
+import sit.int202.register.models.ViewSupport;
 
 @WebServlet(name = "CourseListServlet", value = "/course-list")
 public class CourseListServlet extends HttpServlet {
@@ -36,6 +37,8 @@ public class CourseListServlet extends HttpServlet {
     int semester = Integer.parseInt(parameterMap.get("semester")[0]);
     req.setAttribute("selectedSemester", semester);
     req.setAttribute("subjects", CourseRepository.getSubjects(semester));
+    req.setAttribute("existingSubjects",
+        ViewSupport.getExistingSubject(semester, req.getSession(false)));
     getServletContext().getRequestDispatcher("/course_list.jsp")
         .forward(req, resp);
   }
